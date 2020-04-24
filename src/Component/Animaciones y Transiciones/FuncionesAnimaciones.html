@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transiciones CSS</title>
+  <style>
+
+/*https://matthewlein.com/tools/ceaser  Pagina para probar las distintas animaciones*/ 
+  
+  .ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: tomato;
+    /* transition: all 1.5s 1s ease; */
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(1.000, 0.605, 0.060, 0.610);
+  }
+
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

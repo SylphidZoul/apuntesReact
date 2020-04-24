@@ -1,0 +1,6 @@
+.pokemon {
+ width: 2000px;
+ height: 2000px;
+ background: url(./pokemon.jpg);
+ margin: 0
+}

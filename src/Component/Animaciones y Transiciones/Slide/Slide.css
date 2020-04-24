@@ -1,0 +1,72 @@
+/**********Estilos Globales**********/
+@import url('https://fonts.googleapis.com/css?family=Galada&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*************************************/
+/* Agregamos las animaciones que van a poner con clases dinamicas a las fotos */
+@keyframes show {
+  0% {
+    z-index: 1;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    z-index: 1;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+  }
+}
+
+.animaShow {
+  animation: 650ms show ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animaHide {
+  animation: 650ms hide ease-out;
+  animation-fill-mode: forwards;
+}
+/* vw= viewport width,  vh= viewport Height */
+.Slide {
+width: 100vw;
+height: 100vh;
+background: black;
+color: #FFF;
+font-family: 'Galada', cursive;
+}
+.Slide_Container {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  top: 0
+}
+.Slide_Container_Image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.Slide_Container_Title {
+  position: absolute;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  line-height: 10;
+  background: linear-gradient(0deg, black, transparent);
+  padding: 0 1em;
+  text-shadow: 1px 1px black;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animaciones CSS</title>
+  <style>
+
+    /*Las animaciones CSS se declaran con @keyframes seguido del nombre que queramos, estas tienen dentro los pasos, que se pueden
+    escribir como From y To, o con porcentajes, 0% 100%, tambien podemos agregar pasos intermedios por ejemplo 50% o 30%
+    Luego en elemento que queramos agregarle la animaciones escribimos animation: y por primer dato recibe la duracion de la animacion
+    por segundo el nombre de la animacion por tercero la funcion de aceleracion, por cuarto las veces que queramos que se repita la animacion
+    Luego el segundo tiempo que encuentre va a ser el Delay
+    Animation-direction modifica el punto de partida y el final de la animacion, con alternate podemos lograr que vaya alternando
+    la animacion de arriba hacia abajo como siempre y luego de abajo hacia arriba dando efecto de continuidad, tambien podemos usar
+    reverse que aplicaria la animacion al revez, tambien esta la alternate-reverse que hace los 2 juntos, Tambien tenemos la propiedad
+    animation-fill-mode que nos deja elejir en que estado terminara el elemento luego de la animacion, si en el inicial o en el final
+    con forwards se queda con las propiedades finales, si queremos con las iniciales tenemos que poner backwards*/
+    @keyframes showUp {
+      from {
+        transform: scale(0.6);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-webkit-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-moz-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-o-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+  
+  
+    .ball {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: tomato;
+      /* animation: 1s latido ease 5; */
+      /* -webkit-animation: 1s latido ease 5;
+      -moz-animation: 1s latido ease 5;
+      -o-animation: 1s latido ease 5; */
+      animation-duration: 1s;
+      animation-name: latido;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-delay: 100ms;
+      animation-direction: reverse;
+      animation-fill-mode: backwards;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

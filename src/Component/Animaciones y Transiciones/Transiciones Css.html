@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transiciones CSS</title>
+  <style>
+  
+  /*  Las transiciones son el efecto que que hace suave el cambio de un elemento, para que este no pegue cambios bruscos de un tiron.
+  Estas transiciones se le pueden aplicar a cualquier tipo de propiedad, tambien se pueden aplicar a todas las propiedades con el all,
+  lo segundo que se debe especificar es la duracion de la transicion en Segundos(s) o milisegundos(ms), lo tercero qe le podemos pasar
+  es una funcion de aceleracion, entre estos se encuentra el Ease(empieza acelerando y despues se desacelera), otra propiedad es el
+  // delay que sin especificar lo toma como el segundo parametro de tiempo.
+  */
+  .ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: tomato;
+    /* transition: all 1.5s 1s ease; */
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+    transition-timing-function: ease;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

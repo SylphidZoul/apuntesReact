@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transiciones CSS</title>
+  <style>
+  /* Esto es para declarar animaciones en navegadores viejos si queremos dar compatibilidad.*/
+  .ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: tomato;
+    transition: all 1.5s 1s ease;
+    -webkit-transition: all 1.5s 1s ease;
+    -moz-transition: all 1.5s 1s ease;
+    -o-transition: all 1.5s 1s ease;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>
